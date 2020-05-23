@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Folio Personalisation Matrix</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+	</head>
+
+	<body>
+		<div class="ml-5 mt-5">
+		<p>
+		You can select a material, font and a printing method below in any order you like.
+		Unavailable choices are dimmed immediately.
+		</p>
+		<p>
+		Folio references:
+		<a target="_blank" href="https://www.folioalbums.com/learn-more/cover-materials/">Materials</a> |
+		<a target="_blank" href="https://www.folioalbums.com/learn-more/personalisation-fonts/">Fonts</a> |
+		<a target="_blank" href="https://www.folioalbums.com/learn-more/personalisation-methods/">Methods</a>
+		</p>
+		</div>
+
+		<div class="ml-5">
+		<button id="btn-reset" type="button" class="btn btn-info">Reset</button>
+		<!--      <button id="btn-OK"    type="button" class="btn btn-primary" disabled>OK</button> -->
+		</div>
+
+		<div class="btn-group mt-3">
+			<div class="dropdown div-material">
+				<button class="btn btn-secondary dropdown-toggle mt-header-column-0"
+					type="button"
+					id="dropdown-material"
+					aria-haspopup="true"
+					aria-expanded="false"
+					data-mt-name="Material"
+					data-flip="false">
+				</button>
+			
+				<div class="dropdown-menu dropdown-size" aria-labelledby="dropdownMenuButton">
+
+					<a class="dropdown-item dropdown-section" href="#" disabled>Contemporary Leather:</a>
+
+					<a class="dropdown-item mt-select mtrl airforce-blue"   data-mt-col="0" data-mt-name="Airforce Blue" href="#"></a>
+					<a class="dropdown-item mt-select mtrl blush"           data-mt-col="0" data-mt-name="Blush" href="#"></a>
+					<a class="dropdown-item mt-select mtrl cashew"          data-mt-col="0" data-mt-name="Cashew" href="#"></a>
+					<a class="dropdown-item mt-select mtrl dusk"            data-mt-col="0" data-mt-name="Dusk" href="#"></a>
+					<a class="dropdown-item mt-select mtrl ebony"           data-mt-col="0" data-mt-name="Ebony" href="#"></a>
+					<a class="dropdown-item mt-select mtrl forest-green"    data-mt-col="0" data-mt-name="Forest Green" href="#"></a>
+					<a class="dropdown-item mt-select mtrl graphite"        data-mt-col="0" data-mt-name="Graphite" href="#"></a>
+					<a class="dropdown-item mt-select mtrl honey"           data-mt-col="0" data-mt-name="Honey" href="#"></a>
+					<a class="dropdown-item mt-select mtrl ivory"           data-mt-col="0" data-mt-name="Ivory" href="#"></a>
+					<a class="dropdown-item mt-select mtrl jade"            data-mt-col="0" data-mt-name="Jade" href="#"></a>
+					<a class="dropdown-item mt-select mtrl latte"           data-mt-col="0" data-mt-name="Latte" href="#"></a>
+					<a class="dropdown-item mt-select mtrl mist"            data-mt-col="0" data-mt-name="Mist" href="#"></a>
+					<a class="dropdown-item mt-select mtrl morello"         data-mt-col="0" data-mt-name="Morello" href="#"></a>
+					<a class="dropdown-item mt-select mtrl nut-brown"       data-mt-col="0" data-mt-name="Nut Brown" href="#"></a>
+					<a class="dropdown-item mt-select mtrl peony"           data-mt-col="0" data-mt-name="Peony" href="#"></a>
+					<a class="dropdown-item mt-select mtrl pewter"          data-mt-col="0" data-mt-name="Pewter" href="#"></a>
+					<a class="dropdown-item mt-select mtrl pillar-box"      data-mt-col="0" data-mt-name="Pillar Box" href="#"></a>
+					<a class="dropdown-item mt-select mtrl plum"            data-mt-col="0" data-mt-name="Plum" href="#"></a>
+					<a class="dropdown-item mt-select mtrl porcelain"       data-mt-col="0" data-mt-name="Porcelain" href="#"></a>
+					<a class="dropdown-item mt-select mtrl regency-blue"    data-mt-col="0" data-mt-name="Regency Blue" href="#"></a>
+					<a class="dropdown-item mt-select mtrl saddle"          data-mt-col="0" data-mt-name="Saddle" href="#"></a>
+					<a class="dropdown-item mt-select mtrl sage"            data-mt-col="0" data-mt-name="Sage" href="#"></a>
+					<a class="dropdown-item mt-select mtrl sandstone"       data-mt-col="0" data-mt-name="Sandstone" href="#"></a>
+					<a class="dropdown-item mt-select mtrl truffle"         data-mt-col="0" data-mt-name="Truffle" href="#"></a>
+
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item dropdown-section" href="#" disabled>Essential Cotton:</a>
+
+					<a class="dropdown-item mt-select mtrl carbon"          data-mt-col="0" data-mt-name="Carbon" href="#"></a>
+					<a class="dropdown-item mt-select mtrl denim"           data-mt-col="0" data-mt-name="Denim" href="#"></a>
+					<a class="dropdown-item mt-select mtrl hop"             data-mt-col="0" data-mt-name="Hop" href="#"></a>
+					<a class="dropdown-item mt-select mtrl ketchup"         data-mt-col="0" data-mt-name="Ketchup" href="#"></a>
+					<a class="dropdown-item mt-select mtrl onyx"            data-mt-col="0" data-mt-name="Onyx" href="#"></a>
+					<a class="dropdown-item mt-select mtrl pebble"          data-mt-col="0" data-mt-name="Pebble" href="#"></a>
+					<a class="dropdown-item mt-select mtrl peppermint"      data-mt-col="0" data-mt-name="Peppermint" href="#"></a>
+					<a class="dropdown-item mt-select mtrl woodland"        data-mt-col="0" data-mt-name="Woodland" href="#"></a>
+														
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item dropdown-section" href="#" disabled>Purity:</a>
+
+					<a class="dropdown-item mt-select mtrl beach-hut-blue"  data-mt-col="0" data-mt-name="Beach Hut Blue" href="#"></a>
+					<a class="dropdown-item mt-select mtrl cotswold"        data-mt-col="0" data-mt-name="Cotswold" href="#"></a>
+					<a class="dropdown-item mt-select mtrl fossil"          data-mt-col="0" data-mt-name="Fossil" href="#"></a>
+					<a class="dropdown-item mt-select mtrl lavender"        data-mt-col="0" data-mt-name="Lavender" href="#"></a>
+					<a class="dropdown-item mt-select mtrl nimbus"          data-mt-col="0" data-mt-name="Nimbus" href="#"></a>
+					<a class="dropdown-item mt-select mtrl oxford-blue"     data-mt-col="0" data-mt-name="Oxford Blue" href="#"></a>
+					<a class="dropdown-item mt-select mtrl paperwhite"      data-mt-col="0" data-mt-name="Paperwhite" href="#"></a>
+					<a class="dropdown-item mt-select mtrl soft-mint"       data-mt-col="0" data-mt-name="Soft Mint" href="#"></a>
+
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item dropdown-section" href="#" disabled>Bold Fabric:</a>
+
+					<a class="dropdown-item mt-select mtrl clover"          data-mt-col="0" data-mt-name="Clover" href="#"></a>
+					<a class="dropdown-item mt-select mtrl damson"          data-mt-col="0" data-mt-name="Damson" href="#"></a>
+					<a class="dropdown-item mt-select mtrl jet"             data-mt-col="0" data-mt-name="Jet" href="#"></a>
+					<a class="dropdown-item mt-select mtrl midnight-blue"   data-mt-col="0" data-mt-name="Midnight Blue" href="#"></a>
+					<a class="dropdown-item mt-select mtrl mulberry"        data-mt-col="0" data-mt-name="Mulberry" href="#"></a>
+					<a class="dropdown-item mt-select mtrl mustard"         data-mt-col="0" data-mt-name="Mustard" href="#"></a>
+					
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item dropdown-section" href="#" disabled>Pastel Fabric:</a>
+
+					<a class="dropdown-item mt-select mtrl avocado"         data-mt-col="0" data-mt-name="Avocado" href="#"></a>
+					<a class="dropdown-item mt-select mtrl candyfloss"      data-mt-col="0" data-mt-name="Candyfloss" href="#"></a>
+					<a class="dropdown-item mt-select mtrl dove"            data-mt-col="0" data-mt-name="Dove" href="#"></a>
+					<a class="dropdown-item mt-select mtrl silver-moss"     data-mt-col="0" data-mt-name="Silver Moss" href="#"></a>
+					<a class="dropdown-item mt-select mtrl sky"             data-mt-col="0" data-mt-name="Sky" href="#"></a>
+					<a class="dropdown-item mt-select mtrl tallow"          data-mt-col="0" data-mt-name="Tallow" href="#"></a>
+					
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item dropdown-section" href="#" disabled>Heritage fabric:</a>
+
+					<a class="dropdown-item mt-select mtrl oatmeal"         data-mt-col="0" data-mt-name="Oatmeal" href="#"></a>
+					<a class="dropdown-item mt-select mtrl tusk"            data-mt-col="0" data-mt-name="Tusk" href="#"></a>
+					<a class="dropdown-item mt-select mtrl parchment"       data-mt-col="0" data-mt-name="Parchment" href="#"></a>
+					<a class="dropdown-item mt-select mtrl sea-breeze"      data-mt-col="0" data-mt-name="Sea Breeze" href="#"></a>
+
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item dropdown-section" href="#" disabled>Silk:</a>
+
+					<a class="dropdown-item mt-select mtrl aubergine"       data-mt-col="0" data-mt-name="Aubergine" href="#"></a>
+					<a class="dropdown-item mt-select mtrl champagne"       data-mt-col="0" data-mt-name="Champagne" href="#"></a>
+					<a class="dropdown-item mt-select mtrl frost"           data-mt-col="0" data-mt-name="Frost" href="#"></a>
+					<a class="dropdown-item mt-select mtrl gold"            data-mt-col="0" data-mt-name="Gold" href="#"></a>
+					<a class="dropdown-item mt-select mtrl hot-pink"        data-mt-col="0" data-mt-name="Hot Pink" href="#"></a>
+					<a class="dropdown-item mt-select mtrl peacock"         data-mt-col="0" data-mt-name="Peacock" href="#"></a>
+					<a class="dropdown-item mt-select mtrl powder-blue"     data-mt-col="0" data-mt-name="Powder Blue" href="#"></a>
+					<a class="dropdown-item mt-select mtrl storm"           data-mt-col="0" data-mt-name="Storm" href="#"></a>
+
+				</div>
+			</div>
+
+			<div class="dropdown div-fonts">
+				<button class="btn btn-secondary dropdown-toggle mt-header-column-1"
+					type="button"
+					id="dropdown-font"
+					aria-haspopup="true"
+					aria-expanded="false"
+					data-mt-name="Font"
+					data-flip="false">
+				</button>
+				<div class="dropdown-menu dropdown-size" aria-labelledby="dropdownMenuButton">
+
+					<a class="dropdown-item mt-select font bebas"           data-mt-col="1" data-mt-name="Bebas" href="#"></a>
+					<a class="dropdown-item mt-select font bombshell"       data-mt-col="1" data-mt-name="Bombshell" href="#"></a>
+					<a class="dropdown-item mt-select font century"         data-mt-col="1" data-mt-name="Century" href="#"></a>
+					<a class="dropdown-item mt-select font century-gothic"  data-mt-col="1" data-mt-name="Century Gothic" href="#"></a>
+					<a class="dropdown-item mt-select font coronation"      data-mt-col="1" data-mt-name="Coronation" href="#"></a>
+
+					<a class="dropdown-item mt-select font courier"         data-mt-col="1" data-mt-name="Courier" href="#"></a>
+					<a class="dropdown-item mt-select font futura"          data-mt-col="1" data-mt-name="Futura" href="#"></a>
+					<a class="dropdown-item mt-select font gill-sans"       data-mt-col="1" data-mt-name="Gill Sans" href="#"></a>
+					<a class="dropdown-item mt-select font helvetica"       data-mt-col="1" data-mt-name="Helvetica" href="#"></a>
+
+					<a class="dropdown-item mt-select font magarella"       data-mt-col="1" data-mt-name="Magarella" href="#"></a>
+					<a class="dropdown-item mt-select font melinda"         data-mt-col="1" data-mt-name="Melinda" href="#"></a>
+					<a class="dropdown-item mt-select font montserrat"      data-mt-col="1" data-mt-name="Montserrat"  href="#"></a>
+					<a class="dropdown-item mt-select font prata"           data-mt-col="1" data-mt-name="Prata"  href="#"></a>
+
+					<a class="dropdown-item mt-select font times"           data-mt-col="1" data-mt-name="Times"  href="#"></a>
+					<a class="dropdown-item mt-select font trajan"          data-mt-col="1" data-mt-name="Trajan"  href="#"></a>
+					<a class="dropdown-item mt-select font univers"         data-mt-col="1" data-mt-name="Univers"  href="#"></a>
+				
+				</div>
+			</div>
+
+			<div class="dropdown div-method">
+				<button class="btn btn-secondary dropdown-toggle mt-header-column-2"
+					type="button"
+					id="dropdown-printing"
+					data-mt-name="Method"
+					data-flip="false">
+				</button>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+					<a class="dropdown-item mt-select printing" data-mt-col="2" data-mt-name="Black" href="#">Black</a>
+					<a class="dropdown-item mt-select printing" data-mt-col="2" data-mt-name="White" href="#">White</a>
+					<a class="dropdown-item mt-select printing" data-mt-col="2" data-mt-name="Engraving" href="#">Engraving</a>
+					<a class="dropdown-item mt-select printing" data-mt-col="2" data-mt-name="Blind Debossing" href="#">Blind debossing</a>
+					<a class="dropdown-item mt-select printing" data-mt-col="2" data-mt-name="Foiling (silver/gold)" href="#">Foiling (silver/gold)</a>
+					<a class="dropdown-item mt-select printing" data-mt-col="2" data-mt-name="22 Carat Gold" href="#">22 Carat gold</a>
+					<a class="dropdown-item mt-select printing" data-mt-col="2" data-mt-name="Palladium" href="#">Palladium</a>
+				
+				</div>
+		</div>
+		</div>
+
+	</body>
+
+	<script>
+	$(document).ready(function() {
+
+		var forbidden = [
+
+		// General: Bebas, Prata, Helvetica or Coronation are all available for debossing.
+		[ "Bombshell", "Blind Debossing" ], 
+		[ "Century", "Blind Debossing" ], 
+		[ "Century Gothic", "Blind Debossing" ], 
+		[ "Courier", "Blind Debossing" ], 
+		[ "Futura", "Blind Debossing" ], 
+		[ "Gill Sans", "Blind Debossing" ], 
+		[ "Magarella", "Blind Debossing" ], 
+		[ "Melinda", "Blind Debossing" ], 
+		[ "Montserrat", "Blind Debossing" ], 
+		[ "Times", "Blind Debossing" ], 
+		[ "Trajan", "Blind Debossing" ], 
+		[ "Univers", "Blind Debossing" ], 
+
+		// General: Foiling only possible with Bebas, Coronation and Prata
+		[ "Foiling (silver/gold)", "Bombshell"  ],
+		[ "Foiling (silver/gold)", "Century" ],
+		[ "Foiling (silver/gold)", "Century Gothic" ],
+		[ "Foiling (silver/gold)", "Courier" ],
+		[ "Foiling (silver/gold)", "Futura" ],
+		[ "Foiling (silver/gold)", "Gill Sans" ],
+		[ "Foiling (silver/gold)", "Helvetica" ],
+		[ "Foiling (silver/gold)", "Magarella" ],
+		[ "Foiling (silver/gold)", "Melinda" ],
+		[ "Foiling (silver/gold)", "Montserrat" ],
+		[ "Foiling (silver/gold)", "Times" ],
+		[ "Foiling (silver/gold)", "Trajan" ],
+		[ "Foiling (silver/gold)", "Univers" ],
+
+		// Coronation: debossing and foiling ONLY
+		[ "Coronation", "Black" ],
+		[ "Coronation", "White" ],
+		[ "Coronation", "Engraving" ],
+		[ "Coronation", "22 Carat Gold" ],
+		[ "Coronation", "Palladium" ],
+
+
+		// Purity
+		[ "Fossil", "Black" ], [ "Fossil", "Engraving" ], [ "Lavender", "Engraving" ],
+		[ "nimbus", "Engraving" ], [ "Paperwhite", "White" ],
+
+		// Heritage fabrics (printing)
+		[ "Oatmeal", "Engraving" ], [ "Oatmeal", "Blind Debossing" ], [ "Oatmeal", "22 Carat Gold" ], [ "Oatmeal", "Palladium" ], 
+		[ "Tusk", "Engraving" ], [ "Tusk", "Blind Debossing" ], [ "Tusk", "22 Carat Gold" ], [ "Tusk", "Palladium" ],
+		[ "Tusk", "Foiling (silver/gold)" ],
+		[ "Parchment", "Engraving" ], [ "Parchment", "Blind Debossing" ], [ "Parchment", "22 Carat Gold" ],
+		[ "Parchment", "Palladium" ], [ "Parchment", "Foiling (silver/gold)" ],	  
+		[ "Sea Breeze", "Engraving" ], [ "Sea Breeze", "Blind Debossing" ], [ "Sea Breeze", "22 Carat Gold" ],
+		[ "Sea Breeze", "Palladium" ], 
+
+		// Heritage fabrics (fonts)
+		[ "Oatmeal", "Bombshell", "White"], [ "Oatmeal", "Magarella", "White"], 
+		[ "Tusk", "Bombshell", "White"], [ "Tusk", "Magarella", "White"], 
+		[ "Parchment", "Bombshell", "White"], [ "Parchment", "Magarella", "White"], 
+		[ "Sea Breeze", "Bombshell", "White"], [ "Sea Breeze", "Magarella", "White"], 
+
+
+		[ "Dusk", "Black" ], [ "Ebony", "Black" ], [ "Graphite", "Black" ], 
+		[ "Dusk", "Engraving" ], [ "Ebony", "Engraving" ], [ "Graphite", "Engraving" ],  [ "Latte", "Engraving" ],
+		[ "Dusk", "Blind Debossing" ], [ "Graphite", "Blind Debossing" ], [ "Latte", "Blind Debossing" ],
+		[ "Latte", "Foiling (silver/gold)" ],
+
+		// Contemporary Leather (printing)
+		[ "Dusk", "Black" ], [ "Ebony", "Black" ], [ "Graphite", "Black" ],
+		[ "Dusk", "Engraving" ], [ "Ebony", "Engraving" ], [ "Forest Green", "Engraving" ],
+		[ "Graphite", "Engraving" ], [ "Latte", "Engraving" ],
+		[ "Dusk", "Blind Debossing" ], [ "Graphite", "Blind Debossing" ], [ "Latte", "Blind Debossing" ],
+		[ "Latte", "Foiling (silver/gold)" ],
+		[ "Nut Brown", "Black" ], [ "Truffle", "Black" ], [ "Porcelain", "White" ], [ "Morello", "Engraving" ], 
+		[ "Nut Brown", "Engraving" ], [ "Plum", "Engraving" ], ["Saddle", "Engraving" ], 
+		[ "Sandstone", "Engraving" ], [ "Plum", "Foiling (silver/gold)" ], [ "Saddle", "Foiling (silver/gold)" ],
+
+		// Contemporary Leather (fonts)
+		[ "Latte", "Black", "Bombshell" ], [ "Latte", "Black", "Magarella" ],
+		[ "Airforce Blue", "Engraving", "Bombshell" ], [ "Airforce Blue", "Engraving", "Magarella" ], 
+		[ "Blush", "Engraving", "Bombshell" ], [ "Blush", "Engraving", "Magarella" ], 
+		[ "Cashew", "Engraving", "Bombshell" ], [ "Cashew", "Engraving", "Magarella" ], 
+		[ "Honey", "Engraving", "Bombshell" ], [ "Honey", "Engraving", "Magarella" ], 
+		[ "Ivory", "Engraving", "Bombshell" ], [ "Ivory", "Engraving", "Magarella" ], 
+		[ "Jade", "Engraving", "Bombshell" ], [ "Jade", "Engraving", "Magarella" ], 
+		[ "Mist", "Engraving", "Bombshell" ], [ "Mist", "Engraving", "Magarella" ], 
+		[ "Saddle", "Black", "Bombshell" ], [ "Saddle", "Black", "Magarella" ],
+		[ "Peony", "Engraving", "Bombshell" ], [ "Peony", "Engraving", "Magarella" ],
+		[ "Pewter", "Engraving", "Bombshell" ], [ "Pewter", "Engraving", "Magarella" ],
+		[ "Pillar Box", "Engraving", "Bombshell" ], [ "Pillar Box", "Engraving", "Magarella" ],
+		[ "Porcelain", "Engraving", "Bombshell" ], [ "Porcelain", "Engraving", "Magarella" ],
+		[ "Regency Blue", "Engraving", "Bombshell" ], [ "Regency Blue", "Engraving", "Magarella" ],
+		[ "Sage", "Engraving", "Bombshell" ], [ "Sage", "Engraving", "Magarella" ],
+		[ "Sandstone", "Engraving", "Bombshell" ], [ "Sandstone", "Engraving", "Magarella" ],
+		[ "Truffle", "Engraving", "Bombshell" ], [ "Truffle", "Engraving", "Magarella" ],
+
+		// Essential Cotton (printing)
+		[ "Carbon", "Engraving" ], [ "Denim", "Engraving" ], [ "Hop", "Engraving" ], [ "Pebble", "Engraving" ],
+		[ "Peppermint", "Engraving" ], [ "Woodland", "Engraving" ],
+
+		[ "Carbon", "Blind Debossing" ], [ "Denim", "Blind Debossing" ], [ "Hop", "Blind Debossing" ],
+		[ "Ketchup", "Blind Debossing", ], [ "Pebble", "Blind Debossing" ], [ "Peppermint", "Blind Debossing" ],
+		[ "Woodland", "Blind Debossing" ], [ "Onyx", "Blind Debossing", ],
+
+		[ "Carbon", "22 Carat Gold" ], [ "Denim", "22 Carat Gold" ], [ "Hop", "22 Carat Gold" ],
+		[ "Ketchup", "22 Carat Gold", ], [ "Pebble", "22 Carat Gold" ], [ "Peppermint", "22 Carat Gold" ],
+		[ "Woodland", "22 Carat Gold" ], [ "Onyx", "22 Carat Gold", ],
+
+		[ "Carbon", "Palladium" ], [ "Denim", "Palladium" ], [ "Hop", "Palladium" ],
+		[ "Ketchup", "Palladium", ], [ "Pebble", "Palladium" ], [ "peppermint", "Palladium" ],
+		[ "Woodland", "Palladium" ], [ "Onyx", "Palladium", ],
+		
+		// Essential Cotton (fonts)
+		[ "Ketchup", "Engraving", "Bombshell" ], [ "Ketchup", "Engraving", "Magarella" ], 
+		[ "Onyx", "Engraving", "Bombshell" ], [ "Onyx", "Engraving", "Magarella" ], 
+		
+		// Bold Fabric (printing)
+		[ "Jet", "Black" ], [ "Midnight Blue", "Black" ], [ "Mustard", "Engraving" ],
+		[ "Clover", "White" ], [ "Clover", "Blind Debossing" ], [ "Clover", "22 Carat Gold" ], [ "Clover", "Palladium" ],
+		[ "Damson", "White" ], [ "Damson", "Blind Debossing" ], [ "Damson", "22 Carat Gold" ], [ "Damson", "Palladium" ],
+		[ "Jet", "White" ], [ "Jet", "Blind Debossing" ], [ "Jet", "22 Carat Gold" ], [ "Jet", "Palladium" ],
+		[ "Midnight Blue", "White" ], [ "Midnight Blue", "Blind Debossing" ], [ "Midnight Blue", "22 Carat Gold" ],
+		[ "Midnight Blue", "Palladium" ],
+		[ "Mulberry", "White" ], [ "Mulberry", "Blind Debossing" ], [ "Mulberry", "22 Carat Gold" ], [ "Mulberry", "Palladium" ],
+		[ "Mustard", "White" ], [ "Mustard", "Blind Debossing" ], [ "Mustard", "22 Carat Gold" ], [ "Mustard", "Palladium" ],
+
+		// Bold Fabric (fonts)
+		[ "Clover", "Engraving", "Bombshell" ], [ "Clover", "Engraving", "Magarella" ],
+		[ "Damson", "Engraving", "Bombshell" ], [ "Damson", "Engraving", "Magarella" ],
+		[ "Jet", "Engraving", "Bombshell" ], [ "Jet", "Engraving", "Magarella" ],
+		[ "Midnight Blue", "Engraving", "Bombshell" ], [ "Midnight Blue", "Engraving", "Magarella" ],
+		[ "Mulberry", "Engraving", "Bombshell" ], [ "Mulberry", "Engraving", "Magarella" ],
+
+		// Pastel Fabrics (printing)
+		[ "Avocado", "White" ], [ "Avocado", "Blind Debossing" ], [ "Avocado", "22 Carat Gold" ], [ "Avocado", "Palladium" ],
+		[ "Candyfloss", "White" ], [ "Candyfloss", "Blind Debossing" ], [ "Candyfloss", "22 Carat Gold" ],
+		[ "Candyfloss", "Palladium" ],
+		[ "Dove", "White" ], [ "Dove", "Blind Debossing" ], [ "Dove", "22 Carat Gold" ], [ "Dove", "Palladium" ],
+		[ "Silver Moss", "Engraving" ], [ "Silver Moss", "Blind Debossing" ], [ "Silver Moss", "22 Carat Gold" ],
+		[ "Silver Moss", "Palladium" ],
+		[ "Sky", "Blind Debossing" ], [ "Sky", "22 Carat Gold" ], [ "Sky", "Palladium" ],
+		[ "Tallow", "White" ], [ "Tallow", "Blind Debossing" ], [ "Tallow", "22 Carat Gold" ], [ "Tallow", "Palladium" ],
+
+		// Pastel Fabrics (fonts)
+		[ "Avocado", "Engraving", "Bombshell"], [ "Avocado", "Engraving", "Magarella" ],
+		[ "Candyfloss", "Engraving", "Bombshell"], [ "Candyfloss", "Engraving", "Magarella" ],
+		[ "Dove", "Engraving", "Bombshell"], [ "Dove", "Engraving", "Magarella" ],
+		[ "Sky", "Engraving", "Bombshell"], [ "Sky", "Engraving", "Magarella" ],
+		[ "Tallow", "Engraving", "Bombshell"], [ "Tallow", "Engraving", "Magarella" ],
+
+		// Silk (printing)
+		[ "Aubergine", "Black" ], [ "Aubergine", "White" ], [ "Aubergine", "foiling" ],
+		[ "Aubergine", "22 Carat Gold" ], [ "Aubergine", "Palladium" ],
+		[ "Champagne", "foiling" ], [ "Champagne", "22 Carat Gold" ], [ "Champagne", "Palladium" ],
+		[ "Gold", "White" ], [ "Gold", "foiling" ], [ "Gold", "22 Carat Gold" ], [ "Gold", "Palladium" ],
+		[ "Hot Pink", "Black" ], [ "Hot Pink", "White" ], [ "Hot Pink", "foiling" ],
+		[ "Hot Pink", "22 Carat Gold" ], [ "Hot Pink", "Palladium" ],
+		[ "Storm", "Black" ], [ "Storm", "foiling" ], [ "Storm", "22 Carat Gold" ], [ "Storm", "Palladium" ],
+
+		// Silk (fonts)
+		[ "Aubergine", "Engraving", "Bombshell" ], [ "Aubergine", "Engraving", "Magarella" ],
+		[ "Champagne", "Engraving", "Bombshell" ], [ "Champagne", "Engraving", "Magarella" ],
+		[ "Gold", "Engraving", "Bombshell" ], [ "Gold", "Engraving", "Magarella" ],
+		[ "Hot Pink", "Engraving", "Bombshell" ], [ "Hot Pink", "Engraving", "Magarella" ],
+		[ "Peacock", "Engraving", "Bombshell" ], [ "Peacock", "Engraving", "Magarella" ],
+		[ "Powder Blue", "Engraving", "Bombshell" ], [ "Powder Blue", "Engraving", "Magarella" ],
+		[ "Storm", "Engraving", "Bombshell" ], [ "Storm", "Engraving", "Magarella" ],
+		
+		];
+
+		$("#btn-reset").click(function() {
+		$(".mt-select").each(function() {
+			$(this).removeClass("mt-selected");
+			$(this).removeClass("mt-disabled");
+		});
+		dimExcluded();
+		satOK();
+		});
+
+	/*
+		$("#btn-OK").click(function() {
+		var s = "Choices:\n\n";
+		$(".mt-selected").each(function() {
+			s += $(this).attr("data-mt-name") + "\n";
+		});
+		alert(s);
+		});
+	*/
+
+		// return true if p selected is still a legal configuration
+		function illegal(p) {
+		var name = p.attr("data-mt-name");
+		if (!name) {
+			alert("Warning: an element doesn't have the attribute data-mt-name defined");
+			return false;
+		}
+
+		// console.log("---------\nchecking c=" + c + ", r=" + r);
+		for (var i = 0; i < forbidden.length; i++) {
+			var illegal = forbidden[i];
+			// console.log("checking against i = " + i); console.log(illegal);
+			var found = false;
+			for (var j = 0; j < illegal.length; j++)
+			if (illegal[j] == name)
+				found = true;
+			// found == true iff name in forbidden[i]
+			// now check the other elements in forbidden[i] to see if they are selected
+			if (found) {
+			for (var j = 0; j < illegal.length; j++) {
+				var name1 = illegal[j];
+				if (name == name1)
+				continue;
+				var e = $(".mt-selected[data-mt-name='" + name1 + "']");
+				if (e.length == 0) {
+				// console.log("failed to find c'=" + c1 + ", r'=" + r1);
+				found = false;
+				} else {
+				// console.log("name'=" + name + " is selected");
+				}
+			}
+			}
+			// found == true iff all elements in illegals[i] are selected as well
+			if (found) {
+			// console.log("=> returning false");
+			return false;
+			} else {
+			// console.log("=> no conclusion drawn");
+			}
+		}
+		// console.log("=> returning true");
+		return true;
+		}
+		
+		function satOK() {
+		// find largest column
+		c = 0;
+		$(".mt-select").each(function() {
+			c = Math.max(c, $(this).attr("data-mt-col"));
+		});
+		// check all columns have one choice
+		s = true;
+		for (var i = 0; i <= c; i++) {
+			var p = $(".mt-selected[data-mt-col=" + i + "]");
+			var l = p.length;
+			if (l == 0) {
+			s  = false;
+			$(".mt-header-column-" + i)
+				.html($(".mt-header-column-" + i).attr("data-mt-name"))
+				.removeClass("btn-success")
+				.addClass("btn-secondary");
+			} else {
+			$(".mt-header-column-" + i)
+				.html(p.attr("data-mt-name"))
+				.removeClass("btn-secondary")
+				.addClass("btn-success");
+
+			}
+		}
+		// $("#btn-OK").attr("disabled", !s);
+		}
+
+		function dimExcluded() {
+		$(".mt-select").each(function() {
+			var p = $(this);
+			if (!illegal(p))
+			p.addClass("mt-disabled");
+			else
+			p.removeClass("mt-disabled");
+		});
+		}
+
+		$(".mt-select").click(function() {
+		var p = $(this);
+		if (p.hasClass("mt-selected"))
+			p.removeClass("mt-selected"); // turn off
+		else {        
+			// turn on, but first turn off all other in same column
+			var c = p.attr("data-mt-col");
+			$(".mt-select[data-mt-col=" + c + "]").each(function() {
+			$(this).removeClass("mt-selected");
+			});
+
+			// see if selecting p is a legal combination
+			if (illegal(p)) 
+			p.addClass("mt-selected");
+			else
+			p.removeClass("mt-selected");
+		}
+
+		dimExcluded();
+		satOK();
+		return false;
+		});
+
+		$("#dropdown-material").dropdown("toggle");
+		$("#dropdown-font").dropdown("toggle");      
+		$("#dropdown-printing").dropdown("toggle");      
+
+		function mt_main() {
+		dimExcluded();
+		satOK();
+		}
+
+		mt_main();
+		
+		// scp -P 22000 index.html kjell@rad-01.pub:/var/www/rad-01/tmp/multi-tupel.html
+	});
+	</script>
+
+</html>
