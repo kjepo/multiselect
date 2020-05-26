@@ -27,7 +27,7 @@
 	    return this;
 	}
 
-	// return true if p selected is still a legal configuration
+	// return true iff p selected is still a legal configuration
 	function illegal(p, forbidden) {
 	    var name = p.attr("data-mt-name");
 	    if (!name) {
