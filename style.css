@@ -1,0 +1,57 @@
+.mt-select, .mt-selected {
+    margin: 1px;
+    padding: 5px;
+    border: 3px solid white;
+}
+
+.mt-selected::before {
+content: "\2713  ";
+color: blue;
+}
+
+.mt-disabled {
+    opacity: .3;
+    display: none !important;
+    text-decoration: line-through;
+}
+
+
+.btn-group {
+	display: block !important;
+	margin-left: 3rem;
+}
+
+.dropdown {
+	position: relative;
+	float: left !important;
+	display: inline-block !important;
+	height: 20vh !important;
+	margin-right: 1rem;
+}
+
+.dropdown .btn {
+    width: 200px;
+}
+
+.dropdown-menu {
+	width: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 250px;
+}
+
+.dropdown-item {
+	padding-left: 10px !important;
+}
+
+.dropdown-section {
+	padding-left: 30px !important;
+}
+
+
+.dropdown-section {
+fontsize: small;
+font-style: italic;
+margin-left: -17px;
+}
+
